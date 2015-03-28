@@ -7,12 +7,12 @@ fi
 
 if [ "WERCKER_GRAILS_STEP_VERSION" ]
 then
-    case "$WERCKER_GRAILS_VERSION" in
+    case "$WERCKER_GRAILS_STEP_VERSION" in
         "2.5.0" )
             GRAILS_HOME=/lib/grails-WERCKER_GRAILS_STEP_VERSION;;
         
         * )
-            echo "unknown version:$WERCKER_GRAILS_VERSION"
+            echo "unknown version:$WERCKER_GRAILS_STEP_VERSION"
     esac
     case "$(uname -s)" in
         "Darwin" )
@@ -26,7 +26,7 @@ then
     export PATH="$PATH:$JAVA_HOME/bin"
     export PATH="$PATH:$GRAILS_HOME/bin"
     echo "--- RUN WITH GRAILS $WERCKER_GRAILS_VERSION ----"
-    $GRAILS_HOME/bin/grails $WERCKER_GRAILS_OPTIONS
+    $GRAILS_HOME/bin/grails $WERCKER_GRAILS_STEP_OPTIONS
 else
     echo "version:<not set>"
 	exit 1;
