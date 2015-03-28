@@ -1,4 +1,4 @@
-name: grails
+name: grails-step
 version: 0.0.1
 description: |
  Wercker step for box = olivermt/grails
