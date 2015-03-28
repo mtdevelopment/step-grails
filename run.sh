@@ -1,15 +1,15 @@
 #!/bin/bash
 if [ "$1" ] && [ "$2" ]
 then
-  WERCKER_GRAILS_VERSION=$1
-  WERCKER_GRAILS_OPTIONS=$2
+  WERCKER_GRAILS_STEP_VERSION=$1
+  WERCKER_GRAILS_STEP_OPTIONS=$2
 fi
 
-if [ "$WERCKER_GRAILS_VERSION" ]
+if [ "WERCKER_GRAILS_STEP_VERSION" ]
 then
     case "$WERCKER_GRAILS_VERSION" in
         "2.5.0" )
-            GRAILS_HOME=/lib/grails-$WERCKER_GRAILS_VERSION;;
+            GRAILS_HOME=/lib/grails-WERCKER_GRAILS_STEP_VERSION;;
         
         * )
             echo "unknown version:$WERCKER_GRAILS_VERSION"
