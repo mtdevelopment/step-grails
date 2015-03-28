@@ -29,4 +29,5 @@ then
     $GRAILS_HOME/bin/grails $WERCKER_GRAILS_OPTIONS
 else
     echo "version:<not set>"
+	exit 1;
 fi
