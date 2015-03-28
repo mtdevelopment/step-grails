@@ -1,7 +1,6 @@
 name: grails
-version: 0.0.12
+version: 0.0.1
 description: |
- Wercker step for box = sovlin/Grails-Last-Test
- With BUILD-SNAPSHOT make with github repository
+ Wercker step for box = olivermt/grails
 keywords:
   - Grails 2.5.0
