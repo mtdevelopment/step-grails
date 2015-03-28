@@ -9,7 +9,7 @@ if [ "WERCKER_GRAILS_STEP_VERSION" ]
 then
     case "$WERCKER_GRAILS_STEP_VERSION" in
         "2.5.0" )
-            GRAILS_HOME=/lib/grails-WERCKER_GRAILS_STEP_VERSION;;
+            GRAILS_HOME=/lib/grails-$WERCKER_GRAILS_STEP_VERSION;;
         
         * )
             echo "unknown version:$WERCKER_GRAILS_STEP_VERSION"
